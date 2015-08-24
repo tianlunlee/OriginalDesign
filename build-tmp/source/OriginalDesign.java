@@ -16,24 +16,32 @@ public class OriginalDesign extends PApplet {
 
 public void setup()
 {
-background(0);
+	int opaque = 100;
+	size(480, 640);
+	background(0);
+	fill(60, 45, 10);
+	rect(0, 540, 480, 100);
+	fill(0, 0, 0);
+	rect(0,0,480,640);
 }
 public void draw()
 {
-	change();
+	int cloudx;
+	int cloudy;
 	circle();
+
 }
 
-public void change()
+public void mouseClicked()
 {
-
-	if (mousePressed == true) {
-		fill (random(0,255), random(0,255), random(0,255));
-	}
-
+	opaque = 0;
 }
+public void mouseReleased(){
+	opaque = 100;
+}
+
 public void circle() {
-	ellipse (50,50,30,30);
+	ellipse (400,120,70,70);
 }
 public void lines(){
 

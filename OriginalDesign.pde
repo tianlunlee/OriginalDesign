@@ -1,23 +1,31 @@
 void setup()
 {
-background(0);
+	int opaque = 100;
+	size(480, 640);
+	background(0);
+	fill(60, 45, 10);
+	rect(0, 540, 480, 100);
+	fill(0, 0, 0);
+	rect(0,0,480,640);
 }
 void draw()
 {
-	change();
+	int cloudx;
+	int cloudy;
 	circle();
+
 }
 
-void change()
+void mouseClicked()
 {
-
-	if (mousePressed == true) {
-		fill (random(0,255), random(0,255), random(0,255));
-	}
-
+	opaque = 0;
 }
+void mouseReleased(){
+	opaque = 100;
+}
+
 void circle() {
-	ellipse (50,50,30,30);
+	ellipse (400,120,70,70);
 }
 void lines(){
 

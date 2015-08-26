@@ -1,5 +1,5 @@
-int xPos = 0;
-int opacity = 60;
+
+int oP = 100;
 void setup()
 {
 	size(480, 640);
@@ -10,23 +10,31 @@ void setup()
 }
 void draw()
 {
-	fill(25, 50, 100, opacity);
-	rect(xPos,0,480,640);
+	if (oP == 100) {
+		fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		noLoop();
+	}
+	else if (oP == 0){
+		fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+	}
+	rect(0,0,480,640);
 	fill(255, 255, 255);
 	circle();
-	mouseClicked();
+
 }
 
 void mouseClicked()
 {
-	if (mousePressed == true) {
-		opacity = 0;
+	if (oP == 100) {
+	oP = 0;
 	}
-	else if (mousePressed == false) {
-		opacity = 100;
+	else if (oP == 0) {
+	oP = 100;
 	}
 }
 
-void circle() {
+
+void circle()
+{
 	ellipse (400,120,70,70);
 }

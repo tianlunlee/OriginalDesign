@@ -10,7 +10,7 @@ void setup()
 }
 void draw()
 {
-	randomColor = (int)(Math.random()*255)
+	randomColor = (int)(Math.random()*255);
 	if (mousePressed == true) {
 		
 		fill(mouseY, mouseX, randomColor);

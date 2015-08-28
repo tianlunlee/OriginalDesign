@@ -1,5 +1,6 @@
 
 PImage img;
+int randomColor;
 void setup()
 {
 	
@@ -9,9 +10,10 @@ void setup()
 }
 void draw()
 {
-	
+	randomColor = (int)(Math.random()*255)
 	if (mousePressed == true) {
-		fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		
+		fill(mouseY, mouseX, randomColor);
 
 	}
 

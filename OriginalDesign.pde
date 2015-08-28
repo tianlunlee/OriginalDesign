@@ -26,6 +26,7 @@ void mouseClicked(){
 	int x = 0;
 	int y = 0;
 	if (mousePressed == true && mouseButton == LEFT) {
+		noStroke();
 		ellipse(mouseX+x, mouseY+y, 50, 50);
 	}
 	else if (mousePressed == true && mouseButton == RIGHT)

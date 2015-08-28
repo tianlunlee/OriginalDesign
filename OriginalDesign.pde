@@ -14,9 +14,11 @@ void draw()
 	if (mousePressed == true) {
 		
 		fill(mouseY, mouseX, randomColor);
-
 	}
-
+	if (keyPressed == true && keyCode == SPACE) {
+		fill(255);
+		rect(0, 0, 480, 640);
+	}
 	mouseClicked();
 }
 

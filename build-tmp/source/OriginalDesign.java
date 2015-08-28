@@ -16,6 +16,7 @@ public class OriginalDesign extends PApplet {
 
 
 PImage img;
+int randomColor;
 public void setup()
 {
 	
@@ -25,13 +26,11 @@ public void setup()
 }
 public void draw()
 {
-	
+	randomColor = (int)(Math.random()*255);
 	if (mousePressed == true) {
-		fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		
+		fill(mouseY, mouseX, randomColor);
 
-	}
-	else if (mousePressed == false){
-		fill(255, 255, 255);
 	}
 
 	mouseClicked();
@@ -42,7 +41,8 @@ public void mouseClicked(){
 	int x = 0;
 	int y = 0;
 	if (mousePressed == true && mouseButton == LEFT) {
-		ellipse(mouseX+x, mouseY+y, 50, 50);
+		noStroke();
+		ellipse(mouseX+x, mouseY+y, 10, 10);
 	}
 	else if (mousePressed == true && mouseButton == RIGHT)
 	{
